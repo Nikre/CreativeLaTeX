@@ -15,6 +15,51 @@
             \end{axis}
         \end{tikzpicture}
     \end{center}
+    \section{Change the axis}
+    Is changed the axis:
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[ 
+                axis x line = center,
+                xlabel = $x$,
+                xlabel style={above right},
+                xmin = -5, xmax = 5, 
+                axis y line = center,
+                ylabel = $f(x)$,
+                ylabel style={above left},
+                ymin = -5, ymax = 5]
+            \addplot[ domain = -5:5, samples = 100, color = blue ] {x^2};
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+    You can correct the bug of the axis like this (acting to the xtick):
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[ 
+                axis x line = center,
+                xlabel = $x$,
+                xlabel style={below right},
+                xtick = {-4, -3,..., 3, 4},
+                xmin = -1, xmax = 5, 
+                axis y line = center,
+                ylabel = $f(x)$,
+                ylabel style={below left},
+                ytick = {-4, -3,..., 3, 4},
+                yticklabels={-4, -3,..., 3, ,},
+                ymin = -1, ymax = 5]
+            \addplot[ domain = 0:2, samples = 100, color = blue ] { x^2 };
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+
     \section{Add a Grid}
+    This the same plot with the grid:
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[  axis lines = left, xlabel = $x$, ylabel = $f(x)$  ]
+                \addplot[ domain = -10:10, samples = 5, color = blue ] {x^2};
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
 
 \end{document}
