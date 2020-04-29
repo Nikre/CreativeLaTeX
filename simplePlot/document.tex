@@ -1,0 +1,20 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{lipsum}
+\newcommand{\italic}[1]{\textit{#1}}
+
+\begin{document}
+    \tableofcontents
+    \section{Simple curve}
+    This is a simple plot of $x^2$:
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[ axis lines = left, xlabel = $x$, ylabel = $f(x)$ ]
+                \addplot[ domain = -10:10, samples = 5, color = blue ] {x^2};
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+    \section{Add a Grid}
+
+\end{document}
