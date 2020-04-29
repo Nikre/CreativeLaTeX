@@ -1,0 +1,34 @@
+\documentclass{report}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\newcommand{\italic}[1]{\textit{#1}}
+
+\pgfplotsset{compat=newest}
+\begin{document}
+    \chapter{Vector Flow}
+        I'm following this link \italic{https://latexdraw.com/plot-vector-field-in-latex-tikz/}
+    \section{First Section}
+    \subsection{SubSection}
+    \begin{center}
+        \begin{tikzpicture}
+        \begin{axis}[
+            xmin = -4, xmax = 4,
+            ymin = -4, ymax = 4,
+            zmin = 0, zmax = 1,
+            axis equal image,
+            view = {0}{90}
+        ]
+        \addplot3[
+            quiver = {
+                u = {-y},
+                v = {x}
+            }, 
+            -stealth,
+            domain = -4:4,
+            domain y = -4:4,
+        ] {0};
+        \end{axis}
+    \end{tikzpicture}
+    \end{center}
+\end{document}
