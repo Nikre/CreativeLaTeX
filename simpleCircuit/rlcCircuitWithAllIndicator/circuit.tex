@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage[oldvoltagedirection, american]{circuitikz}
+
+\begin{document}
+    \begin{circuitikz}%[american, scale = 1.5][americanvoltages]
+    \draw 
+        (0, 0) to [V, l^ = $V_{in}$] (0, 3) -- % Voltage Generator
+        (2, 3) to [R, l_ = $R_1$, v^<= $v_{R_1}$, i^=$i_{R_1}$, f_=$i$] (2, 0) % R_1 
+        (2, 3) -- (4, 3) to [L, l_ = $L_1$, v^<= $v_{L_1}$, i^=$i_{L_1}$, f_=$i$] (4, 0) % L_1
+        (4, 3) -- (6, 3) to [C, l_ = $C_1$, v^<= $v_{C_1}$, i^=$i_{C_1}$, f_=$i$] (6, 0) % C_1
+        (6, 0) -- (0, 0); % Common mass
+    \end{circuitikz}
+\end{document}
