@@ -4,7 +4,8 @@ This repo is used to compile some strange project in LaTeX.
 
 ## Notes
 
-Gli spazi sono __fonte di errori__ 
+* Gli spazi sono __fonte di errori__ 
+* Per i circuiti si deve usare l'opzione __oldvoltagedirection__ e __american__
 
 ## Useful links
 
