@@ -2,11 +2,22 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{systeme}
 
 \begin{document}
 	\begin{center}
 		\textbf{\huge Hodgkin–Huxley model}
 	\end{center}
 	The model equation of the Hodgkin–Huxley neuron are the following:
+	\begin{eqnarray}
+		\begin{cases}
+			I = C_m\frac{dV_m}{dt} + \bar{g}_Kn^4(V_m - V_K) + \bar{g}_{Na}m^3h(v_m - V_{Na}) + \bar{g}_l(V_m - V_l) \\
+			\frac{dn}{dt} = \alpha_n(V_m)(1 - n) - \beta_n(V_m)n \\
+			\frac{dm}{dt} = \alpha_m(V_m)(1 - m) - \beta_m(V_m)m \\
+			\frac{dh}{dt} = \alpha_h(V_m)(1 - h) - \beta_h(V_m)h
+		\end{cases}	
+	\end{eqnarray}
+	This is the dynamic:
 	
 \end{document}
